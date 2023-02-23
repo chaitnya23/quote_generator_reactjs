@@ -1,38 +1,90 @@
-.App {
+body{
+  background-color: #1c2039;
+  color:white;
+}
+
+input{
+  all:unset;
+}
+.sidebar {
+  padding: 0px 2.5rem 0 3rem;
+  margin: 5px;
+  width: fit-content;
+  box-shadow: 4px 2px 15px rgba(173, 173, 173, 0.338);
+  /* position: fixed;
+  top: 0;
+  bottom: 0; */
+  
+}
+
+.sidebar .head,.right-bar .head{
+  font-size: 20px;
+  font-weight: bold;
+  width: fit-content;
+  padding: 0 2rem 0 2rem;
+  border:solid white 1.5px;
+  border-radius: 6px;
+}
+.sidebar .box{
+  width: 5rem;
   text-align: center;
+  padding: .6rem 4rem .6rem 4rem;
+  margin: 3rem 0 3rem 0;
+  cursor: pointer;
+  background-color: #fc4735;
+  border-radius: 4px;
+  font-size: 17px;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sidebar :last-child{
+  background-color: #19b6fc;
+}
+.sidebar .box:hover{
+  opacity: .8;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.right-bar{
+  padding: 0px 2.5rem 0 3rem;
+  margin: 5px;
+  width: fit-content;
+  box-shadow: 4px 2px 15px rgba(173, 173, 173, 0.338);
+  /* position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0; */
+}
+.property {
+  margin-top: 15px;
+}
+ input{
+  background-color: white;
+  color: black;
+  padding: 6px;
+  border-radius: 4px;
+  
+}
+.right-bar button{
+  all:unset;
+  padding: 4px 3rem 4px 3rem;
+  margin-top: 3.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  background-color: #fc4735;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.box2{
+
+  text-align: center;
+  padding: .7rem 2rem .7rem 2rem;
+  margin: 3rem 0 3rem 0;
+  cursor: pointer;
+  background-color: #ffa42ef0;
+  border-radius: 4px;
+  font-size: 17px;
+}
+.main{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  gap: 3rem;
+  height: 100vh;
 }
