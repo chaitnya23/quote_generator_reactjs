@@ -52,7 +52,7 @@ select {
   background-color: #f2f2f2;
   border: none;
   outline: none;
-  border-radius: 5px;
+  border-radius: 5rem;
   padding: 10px;
 }
 
@@ -87,11 +87,13 @@ option {
   .quote{
     width: 85%;
   }
+
   select{
     font-size: .9rem;
   }
+
   .nav{
     background-color:rgba(230, 2, 63, 0.642);
-
   }
+
 }
