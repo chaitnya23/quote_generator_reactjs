@@ -1,90 +1,93 @@
 body{
-  background-color: #1c2039;
-  color:white;
+  background-color: rgb(126, 0, 161);
+  margin: 0;
+  padding: 0;
+  color: white;
 }
-
-input{
-  all:unset;
-}
-.sidebar {
-  padding: 0px 2.5rem 0 3rem;
-  margin: 5px;
-  width: fit-content;
-  box-shadow: 4px 2px 15px rgba(173, 173, 173, 0.338);
-  /* position: fixed;
-  top: 0;
-  bottom: 0; */
-  
-}
-
-.sidebar .head,.right-bar .head{
-  font-size: 20px;
-  font-weight: bold;
-  width: fit-content;
-  padding: 0 2rem 0 2rem;
-  border:solid white 1.5px;
-  border-radius: 6px;
-}
-.sidebar .box{
-  width: 5rem;
-  text-align: center;
-  padding: .6rem 4rem .6rem 4rem;
-  margin: 3rem 0 3rem 0;
-  cursor: pointer;
-  background-color: #fc4735;
-  border-radius: 4px;
-  font-size: 17px;
-  
-}
-
-.sidebar :last-child{
-  background-color: #19b6fc;
-}
-.sidebar .box:hover{
-  opacity: .8;
-}
-
-.right-bar{
-  padding: 0px 2.5rem 0 3rem;
-  margin: 5px;
-  width: fit-content;
-  box-shadow: 4px 2px 15px rgba(173, 173, 173, 0.338);
-  /* position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0; */
-}
-.property {
-  margin-top: 15px;
-}
- input{
-  background-color: white;
-  color: black;
-  padding: 6px;
-  border-radius: 4px;
-  
-}
-.right-bar button{
-  all:unset;
-  padding: 4px 3rem 4px 3rem;
-  margin-top: 3.5rem;
-  font-weight: 600;
-  cursor: pointer;
-  background-color: #fc4735;
-}
-
-.box2{
-
-  text-align: center;
-  padding: .7rem 2rem .7rem 2rem;
-  margin: 3rem 0 3rem 0;
-  cursor: pointer;
-  background-color: #ffa42ef0;
-  border-radius: 4px;
-  font-size: 17px;
-}
-.main{
-  display: flex;
-  gap: 3rem;
+.home{
   height: 100vh;
+  width: 100%;
+}
+.quote{
+
+  background-color: rgba(255, 16, 80, 0.943);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: white;
+  text-align: center;
+  padding: 5px 20px 5px 20px;
+  width: 32rem;
+  border-radius: 15px;
+  margin:1.2rem auto 1.2rem auto;
+}
+.quote .content{
+
+  font-size: 20px;
+  width: 85%;
+  margin:25px auto 3rem auto;
+}
+.quote .author{
+  font-weight: bold;
+
+}
+
+.next-btn{
+  all: initial;
+  padding: 8px 35px 8px 35px;
+  margin: auto;
+  border-radius: 5rem;
+  cursor: pointer;
+  color: white;
+  background-color: rgb(0, 159, 72);
+}
+
+.tag-list{
+  display: block;
+  width: 40%;
+  margin: auto;
+  margin-bottom: 2rem;
+}
+select {
+  font-size: 1em;
+  color: #333;
+  background-color: #f2f2f2;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+option {
+  font-size: 1em;
+  color: #333;
+  background-color: #f2f2f2;
+  border: none;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+
+/* loader css */
+.loader {
+  border: 5px solid #f3f3f3; /* Light grey */
+  border-top: 5px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin .8s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 767px){
+  
+  .quote{
+    width: 85%;
+  }
+  select{
+    font-size: .9rem;
+  }
 }

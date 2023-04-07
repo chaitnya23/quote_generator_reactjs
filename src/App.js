@@ -1,21 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
-import Sidebar from './components/sidebar';
-import './App.css';
-import RightBar from './components/right-bar';
-import { useState } from 'react';
-import Middle from './components/Middle';
+import QuoteBox from "./components/quote-box";
+import "./App.css";
+import { useEffect, useState } from "react";
+import Home from "./components/Home";
+import Navbar from "./components/navbar";
+import Bookmarks from "./components/Bookmarks";
+import { useDispatch } from "react-redux";
+import Loader from "./components/loader";
+
 function App() {
 
-  const [widgets, setwidgets] = useState([]);
-  const [text, settext] = useState(null);
-  const [button, setbutton] = useState(null);
+  const [onHome, setonHome] = useState(true);
+  const dispatch = useDispatch();
 
+  useEffect(() => {
+    
+    
+    if( JSON.parse(localStorage.getItem("bookmarks"))){
+      const savedBookmarks = JSON.parse(localStorage.getItem("bookmarks"));
+      dispatch({type:"SET_BOOKMARKS" ,payload:savedBookmarks});
+    }
+
+  }, [])
+  
+  
   return (
-    <div className="main">
-      <Sidebar setwidgets={setwidgets} text={text} settext={settext} setbutton={setbutton} button={button} widgets={widgets}/>
-      <Middle text={text} button={button}/>
-      <RightBar widgets={widgets} settext={settext} text={text} button={button} setbutton={setbutton} setwidgets={setwidgets} />
+    <div className="app">
+    
+      <Navbar onHome={onHome} changeToHome={setonHome}/>
+      {onHome ? <Home /> : <Bookmarks />}
     </div>
   );
 }
