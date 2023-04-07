@@ -90,4 +90,8 @@ option {
   select{
     font-size: .9rem;
   }
+  .nav{
+    background-color:rgba(230, 2, 63, 0.642);
+
+  }
 }
