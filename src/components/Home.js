@@ -38,6 +38,8 @@ export default function Home() {
     //get on selected tag
     const handleSelectedTag = async (tag) => {
 
+        if(tag===null) return;
+        
         setselectedTag(tag);
         setloading(true);
         try {
@@ -92,6 +94,7 @@ export default function Home() {
 
                                 <div>
                                     <select className='tag-list' value={selectedTag} onChange={(e) => handleSelectedTag(e.target.value)} name="" id="">
+                                    <option value={null}>select a category</option>
                                         {
                                             tags.map((tag) => {
                                                 return (
