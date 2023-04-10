@@ -38,6 +38,7 @@ export default function Home() {
     //get on selected tag
     const handleSelectedTag = async (tag) => {
 
+        setselectedTag(tag);
         setloading(true);
         try {
 
@@ -90,7 +91,7 @@ export default function Home() {
                             <div className='' style={{ marginTop: "3rem" }}>
 
                                 <div>
-                                    <select className='tag-list' onChange={(e) => handleSelectedTag(e.target.value)} name="" id="">
+                                    <select className='tag-list' value={selectedTag} onChange={(e) => handleSelectedTag(e.target.value)} name="" id="">
                                         {
                                             tags.map((tag) => {
                                                 return (
